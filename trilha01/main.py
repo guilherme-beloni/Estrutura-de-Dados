@@ -15,8 +15,8 @@ while True:
         novo_voo = Voo(codigo_voo, origem, destino)  #passando os inputs para o OBJ Voo
 
         while True:
-            cidade = input("Digite o nome da cidade de conexão (ou deixe em branco para sair): ")
-            if not cidade:  #se não for dada a entrada de dados das paradas, para o laço
+            cidade = input("Digite o nome da cidade de conexão (ou digite 0 para sair): ")
+            if cidade == '':  #se não for dada a entrada de dados das paradas, para o laço
                 break
             novo_voo.adicionar_parada(cidade) # se não adiciona a cidade atraves do metodo adicionar_parada
 

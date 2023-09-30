@@ -1,6 +1,3 @@
-# semelhante ao arquivo listaencadeada.py das aulas do professor
-# aqui faremos as atribuiçõees dos voos em sí  
-
 from parada import Parada
 
 
@@ -19,7 +16,7 @@ class Voo:
         if self.primeira_parada:                                                           # se parada não existir, sera definido a nova_parada como a primeira parada
             parada_atual = self.primeira_parada                                            # se tiver uma parada, a funcao percorre as paradas    
             while parada_atual.proxima_parada:    
-                parada_atual += parada_atual.proxima_parada                               
+                parada_atual = parada_atual.proxima_parada                               
             parada_atual.proxima_parada = nova_parada                                      # define a nova_parada como a próxima parada dessa última parada
         else:
             self.primeira_parada = nova_parada        
